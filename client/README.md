@@ -12,8 +12,8 @@ npm start
 服务器上的操作，服务器主目录下：
 
 ```
-git clone git@git.coding.net:happypeter/lvzhi.git
-cd lvzhi/client
+git clone git@git.coding.net:billie66/auth-system.git
+cd auth-system/client
 npm install
 npm run build
 mkdir public
