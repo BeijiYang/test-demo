@@ -9,7 +9,7 @@ import axios from 'axios';
 class Avatar extends Component {
   handleChange(e) {
     e.preventDefault();
-    //let API_URL = 'http://localhost:8000';//new
+    let API_URL = 'http://localhost:8000';//new
     let reader = new FileReader();
     let file = e.target.files[0];
     reader.onload = () => {
@@ -18,10 +18,10 @@ class Avatar extends Component {
     reader.readAsDataURL(file);
   
   //new
-  //  axios.post(`${API_URL}/upload`, reader.reslut)   //将虚拟表单post 到  路径“第二行得到的URL／upload"
-  //  .then( response => {
-  //    this.setState({imageURL: API_URL + response.data.path.substr(6)});   //改变组件到state
-  //  });
+  axios.post(`${API_URL}/upload`, reader.reslut)   //将虚拟表单post 到  路径“第二行得到的URL／upload"
+  .then( response => {
+    this.setState({imageURL: API_URL + response.data.path.substr(6)});   //改变组件到state
+  });
   //end
   }
   getStyles() {
